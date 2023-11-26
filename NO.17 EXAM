@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.home), // Add a home icon
+          leading: Icon(Icons.home), 
           title: Text(
             'Hello World',
             style: TextStyle(
@@ -26,14 +26,14 @@ class MyApp extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          backgroundColor: Colors.lightBlue, // Change the header color
+          backgroundColor: Colors.lightBlue, 
           centerTitle: false,
         ),
         body: ListView.builder(
           itemCount: names.length,
           itemBuilder: (context, index) {
             return ListTile(
-              leading: Icon(Icons.person), // Add an icon
+              leading: Icon(Icons.person), 
               title: Text(
                 names[index],
                 style: TextStyle(
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               subtitle: Text(
-                '${names[index].length} Letters ', // Add a subtitle
+                '${names[index].length} Letters ', 
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.grey,
