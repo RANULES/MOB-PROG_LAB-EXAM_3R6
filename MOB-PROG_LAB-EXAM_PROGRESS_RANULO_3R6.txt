@@ -1,0 +1,272 @@
+sir dan's code for ListView.builder:
+
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+ runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+ List names = ["Dan", "Reyes", "John"];
+
+ @override
+ Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(names[index])
+            );
+          }
+        )
+      ),
+    );
+ }
+}
+
+
+imporevd(?)1:
+
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  List names = ["Dan", "Reyes", "John"];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Hello World',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          backgroundColor: darkBlue,
+          centerTitle: false,
+        ),
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(
+                names[index],
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              trailing: Text(
+                names[index].length.toString(),
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
+improved(?)2:
+
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  List names = ["Dan", "Reyes", "John"];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Hello World',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          backgroundColor: darkBlue,
+          centerTitle: false,
+        ),
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: Icon(Icons.person), // Add an icon
+              title: Text(
+                names[index],
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              subtitle: Text(
+                '${names[index].length} Letters ', // Add a subtitle
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+improve(?)3:
+
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+ runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+ List names = ["Dan", "Reyes", "John"];
+
+ @override
+ Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          leading: Icon(Icons.home), // Add a home icon
+          title: Text(
+            'Hello World',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          backgroundColor: darkBlue,
+          centerTitle: false,
+        ),
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: Icon(Icons.person), // Add an icon
+              title: Text(
+                names[index],
+                style: TextStyle(
+                 fontSize: 18,
+                 color: Colors.white,
+                ),
+              ),
+              subtitle: Text(
+                '${names[index].length} Letters ', // Add a subtitle
+                style: TextStyle(
+                 fontSize: 14,
+                 color: Colors.grey,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+ }
+}
+
+Final(I think? I'm not sure, and I can't think straight anymore)
+
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  List names = ["Dan", "Reyes", "John"];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          leading: Icon(Icons.home), // Add a home icon
+          title: Text(
+            'Hello World',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          backgroundColor: Colors.lightBlue, // Change the header color
+          centerTitle: false,
+        ),
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: Icon(Icons.person), // Add an icon
+              title: Text(
+                names[index],
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              subtitle: Text(
+                '${names[index].length} Letters ', // Add a subtitle
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
