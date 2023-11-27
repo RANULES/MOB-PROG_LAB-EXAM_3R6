@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           itemCount: names.length,
           itemBuilder: (context, index) {
             return ListTile(
-              leading: Icon(Icons.person), 
+              leading: Icon(Icons.account_circle), 
               title: Text(
                 names[index],
                 style: TextStyle(
