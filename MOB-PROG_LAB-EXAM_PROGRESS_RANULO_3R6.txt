@@ -282,7 +282,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  List names = ["Harvey", "Kenneth", "Lance"];
+  List names = ["Dan", "Reyes", "John"];
 
   @override
   Widget build(BuildContext context) {
